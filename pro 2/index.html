@@ -10,19 +10,21 @@
 </head>
 
 <body>
+    <!-- Container for movies -->
     <div class="movie-container">
-        <label>Please select your movie</label>
-        <select class="movie">
-            <option value="15">Top Gun: Maverick ($15)</option>
-            <option value="20">No Time To Die ($20)</option>
-            <option value="10">The Lion King ($10)</option>
-            <option value="12">Mission Impossible 5 ($12)</option>
-            <option value="15">Jumangi ($15)</option>
+        <label for="movie">Please pick a movie:</label>
+        <!-- This is the dropdown to select movies -->
+        <select id="movie">
+            <option value="10">The Batman</option>
+            <option value="15">Top Gun 2</option>
+            <option value="20">Mission: Impossible 7</option>
+            <option value="12">No Time to Die</option>
+            <option value="17">Star Wars</option>
         </select>
     </div>
 
-
-    <ul class="legend">
+    <!-- Legend to display types of seats -->
+    <ul class="showcase">
         <li>
             <div class="seat"></div>
             <small>Available</small>
@@ -37,18 +39,11 @@
         </li>
     </ul>
 
+    <!-- Container for Theater Seating Map -->
     <div class="container">
-        <div class="screen"> </div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
+        <!-- This is the class to show the Movie Screen -->
+        <div class="screen"></div>
+        <!-- 6 Rows x 8 Columns Seating Chart -->
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
@@ -62,15 +57,15 @@
         <div class="row">
             <div class="seat"></div>
             <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
             <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
         </div>
         <div class="row">
-            <div class="seat occupied"></div>
+            <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -95,14 +90,23 @@
             <div class="seat"></div>
             <div class="seat occupied"></div>
             <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
         </div>
     </div>
 
-    <p class="text">
-        You have selected <span id="count">0</span> seats for a total price of <span id="total">0</span>
+    <p class="text">You have selected <span id="count">0</span> seats for a total price of $<span id="total">0</span>.
     </p>
 
     <script src="script.js"></script>
