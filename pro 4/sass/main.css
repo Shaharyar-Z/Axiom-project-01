@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #002c3d;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.currency-calculator {
+  width: 60%;
+  background-color: #a2b1a5;
+  border-radius: 0.5rem;
+  padding: 3rem 0;
+}
+
+.currency-calculator p {
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.currency-calculator h1 {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.currency-calculator .currency select {
+  padding: 1rem 2rem 1rem 1rem;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  margin: 3rem 0;
+}
+
+.currency-calculator .currency input {
+  border: 0;
+  outline: none;
+  font-size: 2.4rem;
+  background: transparent;
+  text-align: right;
+  color: #fff;
+  margin: 2rem 0;
+}
+
+.currency-rate {
+  margin-right: 5rem;
+}
+
+.currency-rate p {
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.currency-rate h1 {
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.swap-rate-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.swap-rate-container .btn {
+  background-color: #f02727;
+  color: #fff;
+  font-size: 1.7rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 2rem 8.5rem;
+  border: 0.1rem solid #002c3d;
+}
+
+.swap-rate-container .rate {
+  font-size: 1.7rem;
+  background-color: #fff;
+  color: #f02727;
+  margin: 2rem 8.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 20rem;
+}
+
+.currency-rate {
+  width: 30%;
+  background-color: #a2b1a5;
+  border-radius: 0.5rem;
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.currency-rate select {
+  padding: 1rem 2rem 1rem 1rem;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+}
+
+.currency-rate .rates-text {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  height: 20rem;
+  width: 35rem;
+  overflow: scroll;
+  color: #002c3d;
+  margin-top: 1.5rem;
+}
+
+.currency-rate .rates-text .element {
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+/*# sourceMappingURL=main.css.map */

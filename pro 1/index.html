@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <title>Form</title>
 </head>
 
@@ -14,26 +17,45 @@
         <form class="form" id="form">
             <h2>Sign Up</h2>
             <div class="form_control">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter username">
-                <small>Error Message</small>
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" placeholder="Username">
+                <!-- <small>Error Message</small> -->
             </div>
             <div class="form_control">
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter email">
-                <small>Error Message</small>
+                <i class="fas fa-at"></i>
+                <input type="email" id="email" placeholder="Email">
+                <!-- <small>Error Message</small> -->
             </div>
             <div class="form_control">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter password">
-                <small>Error Message</small>
+                <i class="fas fa-lock-alt"></i>
+                <input type="password" id="password" placeholder="Password">
+                <!-- <small>Error Message</small> -->
             </div>
             <div class="form_control">
-                <label for="password2">Confirm Password</label>
-                <input type="password" id="password2" placeholder="Enter password">
-                <small>Error Message</small>
+                <i class="fas fa-lock-alt"></i>
+                <input type="password" id="password2" placeholder="Confirm">
+                <!-- <small>Error Message</small> -->
             </div>
             <button>Submit</button>
+            <div class="social">
+                <div>
+                    <p class="social-text">or with</p>
+                </div>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
         </form>
     </div>
 
