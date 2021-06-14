@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman Game</title>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <p>Find the hidden word - Guess a letter by entering it on your keyboard</p>
+    <div class="game-container">
+        <div>
+            <!-- Hanging Platform -->
+            <svg height='250' class="figure-container">
+                <line x1='60' y1='20' x2='140' y2='20' />
+                <line x1='140' y1='20' x2='140' y2='50' />
+                <line x1='60' y1='20' x2='60' y2='230' />
+                <line x1='30' y1='230' x2='90' y2='230' />
+
+                <!-- Hangman -->
+                <!-- Head -->
+                <circle cx='140' cy='70' r='20' class="figure-part" />
+                <!-- Body -->
+                <line x1='140' y1='90' x2='140' y2='150' class="figure-part" />
+                <!-- Arms -->
+                <line x1='140' y1='100' x2='110' y2='130' class="figure-part" />
+                <line x1='140' y1='100' x2='170' y2='130' class="figure-part" />
+                <!-- Legs -->
+                <line x1='140' y1='150' x2='110' y2='180' class="figure-part" />
+                <line x1='140' y1='150' x2='170' y2='180' class="figure-part" />
+
+            </svg>
+        </div>
+
+        <!--Container for Incorrect letters -->
+        <div class="incorrect-letters-container">
+            <div id="incorrect-letters"></div>
+        </div>
+
+        <!-- container for incorrect word -->
+        <div class="word" id="word"></div>
+
+        <!-- popup container -->
+        <div class="popup-container" id="popup-container">
+            <div class="popup">
+                <h2 id="final-message"></h2>
+                <button id="play-btn">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Notification If user enters a repeat letter-->
+    <div class="notification-container" id="notification-container">
+        <p>It looks like you've already guessed this letter. Please try another letter.</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
