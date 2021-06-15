@@ -9,19 +9,46 @@ const selectedMeal = document.getElementById('selected_meal');
 
 // Functions
 
-// 1-Function to search the meal
+// Function to render Categories
+function categoryData() {
+    fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data.categories[0]);
+            // Update result Heading
+            resultHeading.innerHTML = `<h1>Categories</h1>`
+            // Check if data return from API
+            if (data.categories === null){
+                resultHeading.innerHTML = `<h1>No result found</h1>`
+            } else {
+                meals.innerHTML = data.categories.map(meal =>
+                    `<div class='meal'>
+
+                    <img src="${meal.strCategoryThumb}" alt="${meal.strCategory}"/>
+
+                    <div class='meal_info' data_mealId='${meal.idCategory}'>
+                    <h3>${meal.strCategory}</h3>
+                    </div>
+                    </div>`
+                ).join('')
+            }
+        })
+};
+categoryData();
+
+
+// Function to search the meal
 function searchMeal(e) {
     // prevent on form submittion
     e.preventDefault();
     // Get the value form input field
-    const searchText = search.value;
+    let searchText = search.value;
     // Check if search input filed is empty
     if (searchText.trim()) {
         // Fetch data form API
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data.meals);
                 // Update result Heading
                 resultHeading.innerHTML = `<h1>Search result for ${searchText}</h1>`
                 // Check if no Data return from API

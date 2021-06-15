@@ -86,10 +86,12 @@ button{
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 0;
 }
+
 .meal:hover .meal_info{
     opacity: 1;
     border-radius: 10px;
