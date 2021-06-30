@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <h2>Expense Tracker</h2>
+    <div class="container">
+        <!-- Overall account balance -->
+        <h4>Account Balance</h4>
+        <h1 id="balance">00.00</h1>
+        <!-- Credit and Debit balance -->
+        <div class="credit_debit_container">
+            <!-- credit balance -->
+            <div>
+                <h4>credit</h4>
+                <p id='money_credit' class="money credit">+0.00</p>
+            </div>
+            <!-- Debit balance -->
+            <div>
+                <h4>Debit</h4>
+                <p id='money_debit' class="money debit">-0.00</p>
+            </div>
+        </div>
+        <!-- Transaction History -->
+        <h3>History</h3>
+        <ul class="list" id="list">
+            <!-- <li class="credit">Salary <span>+5,000</span> <button id='delete_btn' class="delete_btn">x</button></li>
+            <li class="debit">Dinner <span>-1,000</span> <button id='delete_btn' class="delete_btn">x</button></li> -->
+        </ul>
+        <!-- Form to add a new transaction -->
+        <h3>Add Transaction</h3>
+        <form id="addform">
+            <div class="form_control">
+                <label for="reason">Description</label>
+                <input type="text" id='reason' placeholder="Enter reason for transaction" autocomplete="off">
+            </div>
+            <div class="form_control">
+                <label for="amount">Transaction amount</label>
+                <input type="number" id='amount' placeholder="Enter transaction" autocomplete="off">
+            </div>
+            <button class="btn">Add Transaction</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

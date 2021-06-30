@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+$add-color: #26de81;
+$del-color: #fc5c65;
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #1B9CFC;
+    padding: 30px 0 0 0;
+}
+.container{
+    margin: 30px 0;
+    width: 350px;
+}
+h1{
+    letter-spacing: 1.5px;
+}
+h2{
+    font-size: 50px;
+    color: #1e272e;
+}
+h3{
+    margin: 40px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e272e;
+}
+h4{
+    text-transform: uppercase;
+}
+.credit_debit_container{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.credit_debit_container > div{
+    flex: 1;
+    text-align: center;
+}
+.credit_debit_container > div:first-of-type{
+    border-right: 1px solid #1e272e;
+}
+
+.money{
+    font-size: 24px;
+    letter-spacing: 1.5px;
+    margin: 10px 0;
+}
+.money.credit{
+    color: $add-color;
+}
+.money.debit{
+    color: $del-color;
+}
+.list{
+    list-style-type: none;
+}
+.list li{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+.list li.credit{
+    border-right: 10px solid $add-color;
+}
+.list li.debit{
+    border-right: 10px solid $del-color;
+}
+.delete_btn{
+    background-color: #d1425d;
+    border: none;
+    padding: 0 5px;
+    color: white;
+    position: absolute;
+    font-size: 18px;
+    // line-height: 18px;
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.list li:hover button{
+    opacity: 1;
+}
+label{
+    display: inline-block;
+    margin: 10px 0;
+}
+input{
+    // border: 1px solid #1e272e;
+    border-radius: 5px;
+    display: block;
+    font-size: 18px;
+    padding: 10px 10px;
+    width: 100%;
+    border: none;
+}
+input.error{
+    border-left: 3px solid #d1425d;
+}
+input.success{
+    border: none ;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    color: rgb(179, 179, 179);
+}
+.btn{
+    background-color: #e8ecf0;
+    border: none;
+    margin: 20px 0;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: rgb(35, 98, 150);
+    width: 100%;
+    transition: background-color 0.2s linear;
+}
+.btn:hover{
+    background-color: rgb(35, 98, 150);
+    color: #e8ecf0;
+    cursor: pointer;
+}
