@@ -26,7 +26,7 @@ function displayTransaction(transaction) {
     const transactionLI = document.createElement('li');
     transactionLI.classList.add(transaction.amount > 0 ? 'credit' : 'debit')
     transactionLI.innerHTML = `
-    ${transaction.reason} <span>${type}${transaction.amount}</span>
+    ${transaction.reason} <span>${type}$${transaction.amount}</span>
     <button onclick="deleteTransaction(${transaction.id})" id='delete_btn' class="delete_btn">x</button>`
     list.appendChild(transactionLI)
 
