@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+  font-size: 62.5%;
+}
+
+.main_div {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f6f6f6;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.music_container {
+  height: 45rem;
+  width: 35rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.music_container #title {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+  color: #171717;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.music_container #artist {
+  color: #cccaca;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+.music_container .img_container {
+  height: 15rem;
+  width: 15rem;
+  margin: auto;
+}
+
+img {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.music_controls {
+  width: 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.music_controls .fas {
+  font-size: 2rem;
+  color: #111;
+  cursor: pointer;
+  -webkit-filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+
+.music_controls .main_button {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #111;
+  color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+}
+
+.music_controls .fas:hover {
+  color: grey;
+}
+
+.music_controls .fa-play:hover {
+  color: #111;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.music_controls .fa-pause:hover {
+  color: #111;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1rem 2rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+
+.anime {
+  -webkit-animation: rotateplayer 3s linear  infinite;
+          animation: rotateplayer 3s linear  infinite;
+}
+
+.progress {
+  background-color: gray;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 5px;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.progress-bar {
+  background-color: #95afc0;
+  height: 100%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+
+/* --------------------------Icon Bar */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+}
+
+.icon-bar a {
+  width: 18rem;
+  text-decoration: none;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -webkit-transform: translateX(-14.5rem);
+          transform: translateX(-14.5rem);
+}
+
+.icon-bar a:hover {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.icon-bar .fab {
+  padding-left: 1rem;
+  font-size: 3rem;
+  animation: letszoom 3s linear alternate-reverse infinite;
+}
+
+.icon-bar .github {
+  background-color: #111;
+}
+
+@-webkit-keyframes letszoom {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes letszoom {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes rotateplayer {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateplayer {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */
