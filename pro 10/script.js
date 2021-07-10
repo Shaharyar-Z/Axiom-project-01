@@ -7,6 +7,8 @@ const title = document.getElementById('title');
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const progress = document.getElementById('progress');
+const volume = document.querySelector('#volume');
+const volumeBtn = document.querySelector('#volume-up');
 
 const songs = [
     {
@@ -49,12 +51,23 @@ function loadSong(song) {
 songIndex = 0;
 
 function nextSong() {
-    songIndex = (songIndex + 1) % songs.length;
+    // songIndex = (songIndex + 1) % songs.length;
+    songIndex++;
+    // Check if selected track index is greater than the index of last track
+    if ( songIndex > songs.length - 1 ) {
+        // Reassign the songIndex to last track in the trackArray
+        songIndex = 0;
+    };
     loadSong(songs[songIndex])
     audioStatus()
 };
 function prevSong() {
-    songIndex = (songIndex - 1 + songs.length) % songs.length;
+    // songIndex = (songIndex - 1 + songs.length) % songs.length;
+    songIndex--;
+    if ( songIndex < 0 ) {
+        // Reassign the trackIndex to last track in the trackArray
+        songIndex = songs.length - 1;
+    };
     loadSong(songs[songIndex])
     audioStatus()
 };
@@ -75,9 +88,28 @@ function setAudioProgress() {
         nextSong()
     }
 }
+function setProgress(e) {
+    const width = this.clientWidth;
+    const clickedLocation = e.offsetX;
+    const duration = music.duration;
+    music.currentTime = clickedLocation / width * duration;
+
+    // console.log(width,clickedLocation,duration);
+}
+function setvolume() {
+    music.volume = volume.value / 100;
+
+    if (music.volume !== 0) {
+        volumeBtn.classList = 'fas fa-volume-up'
+    } else {
+        volumeBtn.classList.replace('fa-volume-up', 'fa-volume-mute')
+    }
+}
 
 
 play.addEventListener('click', audioStatus)
 next.addEventListener('click', nextSong)
 prev.addEventListener('click', prevSong)
 music.addEventListener('timeupdate',setAudioProgress)
+progress.addEventListener('click',setProgress)
+volume.addEventListener('change',setvolume)

@@ -43,7 +43,7 @@ html{
     letter-spacing: 0.1rem;
     font-size: 2rem;
     font-weight: 300;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 .music_container .img_container{
     height: 15rem;
@@ -63,7 +63,7 @@ img{
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .music_controls .fas{
     font-size: 2rem;
@@ -101,7 +101,6 @@ img{
 .progress{
     background-color: gray;
     cursor: pointer;
-    border-radius: 5px;
     height: 5px;
     width: 70%;
     margin: 0 auto;
@@ -112,6 +111,61 @@ img{
     height: 100%;
     // width: 70%;
     transition: width 0.1s linear;
+}
+
+//----------------------- Volume Slider
+
+.volume-div{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 1rem 4.4rem;
+}
+.volume-div .fas{
+    font-size: 1.7rem;
+    color: #111;
+}
+.fas:hover {
+    color: #95afc0;
+}
+
+  
+.slider {
+    -webkit-appearance: none;
+    width: 70px;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 20px;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-start;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #95afc0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #95afc0;
+    cursor: pointer;
+}
+  .slider::-webkit-slider-thumb:hover{
+  transform: scale(1.2);
 }
 
 /* --------------------------Icon Bar */

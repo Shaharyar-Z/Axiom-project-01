@@ -24,7 +24,7 @@ $color:hsl(197, 100%, 12%);
 }
 
 .currency-calculator{
-    width: 60%;
+    width: 55%;
     background-color: rgb(162, 177, 165);
     border-radius: 0.5rem;
     padding: 3rem 0;
@@ -63,6 +63,7 @@ $color:hsl(197, 100%, 12%);
         font-size: 1.7rem;
     }
     h1{
+        margin-top: -2rem;
         padding: 1rem;
         font-size: 2.5rem;
     }
@@ -97,7 +98,7 @@ $color:hsl(197, 100%, 12%);
 }
 
 .currency-rate {
-    width: 30%;
+    width: 25%;
     background-color: rgb(162, 177, 165);
     border-radius: 0.5rem;
     padding: 3rem 0;
@@ -112,13 +113,14 @@ $color:hsl(197, 100%, 12%);
     font-size: 16px;
     border: 0;
     outline: none;
+    width: 80%;
     }
 
     .rates-text{
         background-color: #fff;
         border-radius: 0.5rem;
         height: 20rem;
-        width: 35rem;
+        width: 80%;
         overflow: scroll;
         color: $color;
         margin-top: 1.5rem;
@@ -134,6 +136,33 @@ $color:hsl(197, 100%, 12%);
     }
 
     
+}
+
+@media (max-width:77rem) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .currency-calculator{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        .currency select{
+            width: 20rem;
+        }
+        .currency input{
+            width: 20rem;
+        }
+    }
+    .swap-rate-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2rem;
+        width: 20rem;
+    }
 }
 
 
