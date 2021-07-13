@@ -129,12 +129,25 @@ body {
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(94, 94, 94, 0.9);
+          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(94, 94, 94, 0.9);
+  cursor: pointer;
+}
+
+.user-data img:hover {
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #4b7bec;
+          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #4b7bec;
 }
 
 .user-data p {
   margin-left: 1.5rem;
   font-size: 1.7rem;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.user-data p:hover {
+  color: #4b7bec;
 }
 
 .loader {

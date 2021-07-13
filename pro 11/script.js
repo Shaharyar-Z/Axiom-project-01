@@ -6,6 +6,7 @@ const loader = document.querySelector('#loader');
 
 let limit = 4;
 let pageCount = 1;
+let postCount = 1;
 
 const getUser = async ()=> {
     const userRes = await fetch(`https://randomuser.me/api`);
@@ -18,7 +19,8 @@ const getUser = async ()=> {
 
 async function getPost() {
     // const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}$_post=${pageCount}`);
-    const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts/`);
+    const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
+    // const postRes = await fetch(`https://jsonplaceholder.typicode.com/posts/`);
     const postData = await postRes.json();
     
     postData.forEach(async (posts) => {
@@ -30,7 +32,7 @@ async function getPost() {
         });
         
         const htmlData = `
-                    <div class="post-id">${posts.id}</div>
+                    <div class="post-id">${postCount++}</div>
                     <div class="post-content">
                         <h2 class="post-title">${posts.title}</h2>
                         <p class="post-body">
@@ -50,20 +52,21 @@ getPost();
 
 
 
-// function showData() {
-//     setTimeout(() =>{
-//         pageCount +1;
-//         getPost();
-//     },800)
-// }
+function showData() {
+    setTimeout(() => {
+        loader.classList.remove('show')
+        limit +4;
+        getPost();
+    },1000)
+}
 
 window.addEventListener('scroll', () => {
     const { scrollHeight, scrollTop, clientHeight } = document.documentElement;
     
     if (scrollTop + clientHeight >= scrollHeight - 1) {
         // console.log('I am at Bottom');
-        // loader.classList.add('show')
-        // showData();
+        loader.classList.add('show')
+        showData();
     } 
 })
 
