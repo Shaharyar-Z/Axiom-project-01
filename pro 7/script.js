@@ -5,6 +5,7 @@ const popup = document.getElementById('popup-container');
 const finalMessage = document.getElementById('final-message');
 const playBtn = document.getElementById('play-btn');
 const notification = document.getElementById('notification-container');
+const randomWord = document.getElementById('random-word');
 
 // Get DOM Elements for Hangman
 const figureParts = document.querySelectorAll('.figure-part');
@@ -70,6 +71,7 @@ function updateIncorrectLetters() {
     // Check if user lost
     if (incorrectLettersArray.length === figureParts.length) {
         finalMessage.innerText = 'You Lost!';
+        randomWord.innerText = `Word: ${selectedWord}`;
         popup.style.display = 'flex'
     }
 };

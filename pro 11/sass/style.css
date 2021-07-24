@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -15,7 +16,7 @@
 
 body {
   font-family: 'Kanit', sans-serif;
-  background-color: #4b7bec;
+  background-color: #e9e9e9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +37,7 @@ body {
   padding: 2rem 0;
   font-size: 5em;
   letter-spacing: 0.2rem;
-  color: white;
+  color: #cf3e3e;
 }
 
 .filter-container {
@@ -51,8 +52,8 @@ body {
   height: 4rem;
   padding: 0.5rem 1.5rem;
   border: none;
-  -webkit-box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.4);
   border-radius: 2rem;
   font-size: 1.9rem;
   color: #adadad;
@@ -80,13 +81,20 @@ body {
   -webkit-box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0.2rem 0 rgba(0, 0, 0, 0.5);
   margin: 4rem 0;
-  border-radius: 0.3rem;
-  padding: 3rem;
-  width: 70vw;
+  border-radius: 1rem;
+  padding: 0 0 1rem 0;
+  width: 40vw;
   max-width: 80rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5rem;
 }
 
@@ -106,48 +114,78 @@ body {
   font-weight: 900;
 }
 
-.post-content {
-  margin-left: 1.5rem;
+.img-div {
+  position: relative;
 }
 
-.post-body {
-  margin: 1rem 0 0 0;
-  line-height: 150%;
+.img-div img {
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  height: 30rem;
 }
 
-.user-data {
-  margin: 2rem 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.img-div h6 {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  color: #f3f3f3;
+  font-size: 1.5rem;
+  background-color: #cf3e3e;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  letter-spacing: 0.1rem;
 }
 
-.user-data img {
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(94, 94, 94, 0.9);
-          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(94, 94, 94, 0.9);
-  cursor: pointer;
+.post-title {
+  padding: 0 1rem;
+  line-height: 2.5rem;
 }
 
-.user-data img:hover {
-  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #4b7bec;
-          box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem #4b7bec;
-}
-
-.user-data p {
-  margin-left: 1.5rem;
+.post .post-title a {
+  text-decoration: none;
+  font-family: 'Otomanopee One', sans-serif;
   font-size: 1.7rem;
-  font-weight: 500;
+  text-transform: capitalize;
+  color: #cf3e3e;
   cursor: pointer;
 }
 
-.user-data p:hover {
-  color: #4b7bec;
+.post .post-body {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  border-bottom: 0.1rem solid gray;
+  padding-bottom: 0.5rem;
+  color: #979191;
+}
+
+.post button {
+  width: 5rem;
+  color: #979191;
+  font-weight: bold;
+  font-size: 2rem;
+  background: none;
+  outline: none;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.post button a {
+  text-decoration: none;
+  color: #979191;
+}
+
+.post button .fas {
+  color: #979191;
+}
+
+.post button .fas:hover {
+  color: #cf3e3e;
+}
+
+.post button a:hover {
+  color: #cf3e3e;
 }
 
 .loader {
@@ -156,7 +194,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  bottom: 1rem;
+  bottom: 7rem;
   -webkit-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
@@ -170,7 +208,7 @@ body {
   height: 1rem;
   border-radius: 50%;
   margin: 0.3rem;
-  background-color: white;
+  background-color: #cf3e3e;
   -webkit-animation: bounce 0.6s ease-in infinite;
           animation: bounce 0.6s ease-in infinite;
 }
