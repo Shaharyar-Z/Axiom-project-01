@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Typing Game</title>
+</head>
+<body>
+    <!-- Setting button -->
+    <button class="setting-btn" id="setting-btn">
+        <i class="fas fa-tools fa-2x"></i>
+    </button>
+
+    <!-- Setting container -->
+    <div class="settings hide" id="settings">
+        <div id="form">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option value="easy" >easy</option>
+                <option value="medium" >medium</option>
+                <option value="hard" >hard</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Fast Typing Game</h2>
+        <p>Type this word as fast as you can</p>
+        <h1 id="word" oncopy='return false'></h1>
+        <input onpaste='return false' type="text" id="user-word" placeholder="Please type here" autocomplete="off">
+
+        <!-- Time container -->
+        <p class="timer">
+            Time Remaining: <span id="time">10s</span>
+        </p>
+        
+        <!-- Score conatiner -->
+        <p class="score-card">
+            Score: <span id="score">0</span>
+        </p>
+    </div>
+
+    <!-- End of the container -->
+    <div class="gameover" id="gameover"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
