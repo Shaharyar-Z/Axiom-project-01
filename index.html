@@ -1,164 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      .main_div {
+        /* width: 100vw; */
+        background-color: #222f3e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .center_div {
+        width: 80%;
+        height: auto;
+      }
+
+      .center_div ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      .center_div ul li {
+        margin: 4rem 0;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: 7rem;
+        padding-left: 2rem;
+        font-family: "Bebas Neue", cursive;
+        color: #576574;
+        animation: light 1.3s linear infinite;
+      }
+
+      .center_div ul li:first-child {
+        padding-left: 0;
+      }
+
+      @keyframes light {
+        0% {
+          color: #576574;
+          text-shadow: none;
         }
 
-        html {
-            font-size: 62.5%;
+        90% {
+          color: #576574;
+          text-shadow: none;
         }
 
-        .main_div {
-            /* width: 100vw; */
-            background-color: #222f3e;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
+        100% {
+          color: #f1c40f;
+          text-shadow: 0 0 1rem #d35400, 0 0 7rem #d35400;
         }
+      }
 
-        .center_div {
-            width: 80%;
-            height: auto;
-        }
+      .center_div ul li:nth-child(1) {
+        animation-delay: 0s;
+      }
 
-        .center_div ul {
-            display: flex;
-            justify-content: center;
-        }
+      .center_div ul li:nth-child(2) {
+        animation-delay: 0.1s;
+      }
 
-        .center_div ul li {
-            margin: 4rem 0;
-            list-style: none;
-            text-transform: uppercase;
-            font-size: 7rem;
-            padding-left: 2rem;
-            font-family: 'Bebas Neue', cursive;
-            color: #576574;
-            animation: light 1.3s linear infinite;
-        }
+      .center_div ul li:nth-child(3) {
+        animation-delay: 0.2s;
+      }
 
-        .center_div ul li:first-child {
-            padding-left: 0;
-        }
+      .center_div ul li:nth-child(4) {
+        animation-delay: 0.3s;
+      }
 
-        @keyframes light {
-            0% {
-                color: #576574;
-                text-shadow: none;
-            }
+      .center_div ul li:nth-child(5) {
+        animation-delay: 0.4s;
+      }
 
-            90% {
-                color: #576574;
-                text-shadow: none;
-            }
+      .center_div ul li:nth-child(6) {
+        animation-delay: 0.5s;
+      }
 
-            100% {
-                color: #f1c40f;
-                text-shadow: 0 0 1rem #d35400, 0 0 7rem #d35400;
-            }
-        }
+      .center_div ul li:nth-child(7) {
+        animation-delay: 0.6s;
+      }
 
-        .center_div ul li:nth-child(1) {
-            animation-delay: 0s;
-        }
+      .center_div ul li:nth-child(8) {
+        animation-delay: 0.7s;
+      }
 
-        .center_div ul li:nth-child(2) {
-            animation-delay: 0.1s;
-        }
+      ol li {
+        margin-bottom: 30px;
+        list-style: none;
+        font-size: 2rem;
+      }
 
-        .center_div ul li:nth-child(3) {
-            animation-delay: 0.2s;
-        }
+      li a {
+        color: #f1c40f;
+        list-style: none;
+        text-decoration: none;
+        border: 0.5px solid #f1c40f;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
 
-        .center_div ul li:nth-child(4) {
-            animation-delay: 0.3s;
-        }
-
-        .center_div ul li:nth-child(5) {
-            animation-delay: 0.4s;
-        }
-
-        .center_div ul li:nth-child(6) {
-            animation-delay: 0.5s;
-        }
-
-        .center_div ul li:nth-child(7) {
-            animation-delay: 0.6s;
-        }
-
-        .center_div ul li:nth-child(8) {
-            animation-delay: 0.7s;
-        }
-
-
-
-        ol li {
-            margin-bottom: 30px;
-            list-style: none;
-            font-size: 2rem;
-        }
-
-        li a {
-            color: #f1c40f;
-            list-style: none;
-            text-decoration: none;
-            border: 0.5px solid #f1c40f;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-transform: capitalize;
-        }
-
-        li a:hover {
-            color: #222f3e;
-            background-color: #f1c40f;
-        }
+      li a:hover {
+        color: #222f3e;
+        background-color: #f1c40f;
+      }
     </style>
     <title>JavsScript Projects</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main_div">
-        <div class="center_div">
-            <ul>
-                <li>P</li>
-                <li>R</li>
-                <li>O</li>
-                <li>J</li>
-                <li>E</li>
-                <li>C</li>
-                <li>T</li>
-                <li>S</li>
-            </ul>
-            <ol>
-                <li><a href="/pro 1/index.html">Html Form Validation</a></li>
-                <li><a href="/pro 2/index.html">Seat selection at movie theater</a></li>
-                <li><a href="/pro 3/index.html">Custom video player</a></li>
-                <li><a href="/pro 4/index.html">Calculating Exchange Rate</a></li>
-                <li><a href="/pro 5/index.html">DOM Array Method</a></li>
-                <li><a href="/pro 6/index.html">Landing Page</a></li>
-                <li><a href="/pro 7/index.html">Hangman Game</a></li>
-                <li><a href="/pro 8/index.html">Meal Generator</a></li>
-                <li><a href="/pro 9/index.html">Expense Tracker</a></li>
-                <li><a href="/pro 10/index2.html">Music Player</a></li>
-                <li><a href="/pro 11/index.html">Infinite Scrolling App</a></li>
-                <li><a href="/pro 12/index.html">Typing Game</a></li>
-                <li><a href="/pro 13/index.html">Memory cards</a></li>
-                <li><a href="/Notes App/">Notes Keep App</a></li>
-            </ol>
-        </div>
+      <div class="center_div">
+        <ul>
+          <li>P</li>
+          <li>R</li>
+          <li>O</li>
+          <li>J</li>
+          <li>E</li>
+          <li>C</li>
+          <li>T</li>
+          <li>S</li>
+        </ul>
+        <ol>
+          <li><a href="/pro 1/index.html">Html Form Validation</a></li>
+          <li>
+            <a href="/pro 2/index.html">Seat selection at movie theater</a>
+          </li>
+          <li><a href="/pro 3/index.html">Custom video player</a></li>
+          <li><a href="/pro 4/index.html">Calculating Exchange Rate</a></li>
+          <li><a href="/pro 5/index.html">DOM Array Method</a></li>
+          <li><a href="/pro 6/index.html">Landing Page</a></li>
+          <li><a href="/pro 7/index.html">Hangman Game</a></li>
+          <li><a href="/pro 8/index.html">Meal Generator</a></li>
+          <li><a href="/pro 9/index.html">Expense Tracker</a></li>
+          <li><a href="/pro 10/index2.html">Music Player</a></li>
+          <li><a href="/pro 11/index.html">Infinite Scrolling App</a></li>
+          <li><a href="/pro 12/index.html">Typing Game</a></li>
+          <li><a href="/pro 13/index.html">Memory cards</a></li>
+          <li><a href="/pro 14/index.html">Web Speech</a></li>
+          <li><a href="/Notes App/">Notes Keep App</a></li>
+        </ol>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

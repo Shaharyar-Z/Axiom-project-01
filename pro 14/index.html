@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <title>Web Speech</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Title Page -->
+      <h1>Web Speech</h1>
+      <button class="btn toggle-btn" id="toggle">Toggle Custom Text</button>
+      <div class="custom-text" id="custom-text">
+        <div class="close" id="close">X</div>
+        <h3>Change Voice</h3>
+        <!-- Add voices with JS -->
+        <select id="voices"></select>
+        <textarea
+          id="text"
+          placeholder="Please provide a custom text for the web speech Api"
+        ></textarea>
+        <button class="btn" id="read">Read Custom Text</button>
+      </div>
+      <main id="main"></main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
